@@ -980,6 +980,22 @@
       }
       #d2-floorplans .fp-cta:hover { background: transparent; color: var(--bronze3); }
 
+      #d2-floorplans .fp-card-btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        background: linear-gradient(135deg, #A5824C 0%, #6A4F1E 100%);
+        color: #fff !important; padding: 10px 22px; border-radius: 6px;
+        text-decoration: none; font-weight: 700; font-size: 10.5px;
+        letter-spacing: 1.5px; text-transform: uppercase;
+        transition: all 0.3s ease; border: 2px solid #6A4F1E; margin-top: 20px;
+        box-shadow: 0 4px 12px rgba(106,79,30,0.15); width: fit-content;
+        align-self: flex-start; cursor: pointer; text-align: center;
+      }
+      #d2-floorplans .fp-card-btn:hover {
+        background: transparent;
+        color: var(--bronze3) !important;
+        box-shadow: none;
+      }
+
       @media (max-width: 800px) {
         #d2-floorplans .fp-panel.active { grid-template-columns: 1fr; }
         #d2-floorplans .fp-img { height: auto; min-height: 240px; border-radius: 8px 8px 0 0; }
@@ -1028,6 +1044,10 @@
             <span class="fp-spec-val">2,024 – 2,213 sq.ft.</span>
           </div>
         </div>
+        <a href="javascript:void(0);" onclick="openPopupModal()" class="fp-card-btn">
+          Know More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -1056,6 +1076,10 @@
             <span class="fp-spec-val">2,213 – 2,500 sq.ft.</span>
           </div>
         </div>
+        <a href="javascript:void(0);" onclick="openPopupModal()" class="fp-card-btn">
+          Know More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -1082,6 +1106,10 @@
             <span class="fp-spec-val">2,721 – 2,968 sq.ft.</span>
           </div>
         </div>
+        <a href="javascript:void(0);" onclick="openPopupModal()" class="fp-card-btn">
+          Know More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -1109,6 +1137,10 @@
             <span class="fp-spec-val">up to 3,287 sq.ft.</span>
           </div>
         </div>
+        <a href="javascript:void(0);" onclick="openPopupModal()" class="fp-card-btn">
+          Know More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -1137,6 +1169,10 @@
             <span class="fp-spec-val">up to 5,500 sq.ft.</span>
           </div>
         </div>
+        <a href="javascript:void(0);" onclick="openPopupModal()" class="fp-card-btn">
+          Know More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -1165,6 +1201,10 @@
             <span class="fp-spec-val">up to 6,492 sq.ft.</span>
           </div>
         </div>
+        <a href="javascript:void(0);" onclick="openPopupModal()" class="fp-card-btn">
+          Know More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -1213,21 +1253,22 @@
       }
       .price-card {
         position: relative; overflow: hidden;
-        background: rgba(10, 14, 20, 0.45); color: #FFFFFF;
+        background: #FDFBF7; color: #4A3B2C;
         border-radius: 16px; padding: 0;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(165, 130, 76, 0.25);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
         cursor: pointer;
         transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       }
       .price-card:hover {
-        transform: translateY(-5px); border-color: rgba(255, 255, 255, 0.6);
-        box-shadow: 0 20px 50px rgba(255, 255, 255, 0.15);
+        transform: translateY(-5px); border-color: rgba(106, 79, 30, 0.6);
+        box-shadow: 0 20px 50px rgba(106, 79, 30, 0.12);
       }
       .card-bg-blur {
         position: absolute; inset: 0; z-index: 0;
         background-size: cover; background-position: center;
-        filter: blur(8px) brightness(0.45);
+        filter: sepia(35%) brightness(0.95) contrast(0.95) blur(2.5px);
+        opacity: 0.55;
         transform: scale(1.1);
         transition: transform 0.5s ease;
       }
@@ -1247,15 +1288,15 @@
         color: #F0D7A3; line-height: 1.1; margin-bottom: 6px;
       }
       .price-bhk {
-        font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
-        color: #FFFFFF; font-weight: 700; margin-bottom: 28px;
+        font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+        color: #5C492C; font-weight: 700; margin-bottom: 28px;
       }
 
       .price-size-pill {
-        background: rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.9);
+        background: rgba(165, 130, 76, 0.08); color: #5C492C;
         padding: 8px 24px; border-radius: 8px;
         font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
-        margin-bottom: 32px; border: 1px solid rgba(255, 255, 255, 0.18);
+        margin-bottom: 32px; border: 1px solid rgba(165, 130, 76, 0.2);
       }
 
       .price-get-details-btn {
@@ -1264,10 +1305,10 @@
         color: #FFFFFF !important; font-weight: 700; font-size: 13px;
         letter-spacing: 0.5px; text-decoration: none; border: none;
         cursor: pointer; transition: transform 0.25s ease, box-shadow 0.25s ease;
-        box-shadow: 0 6px 20px rgba(199, 152, 40, 0.35);
+        box-shadow: 0 6px 20px rgba(106, 79, 30, 0.2);
       }
       .price-get-details-btn:hover {
-        transform: translateY(-2px); box-shadow: 0 10px 25px rgba(199, 152, 40, 0.55);
+        transform: translateY(-2px); box-shadow: 0 10px 25px rgba(106, 79, 30, 0.35);
       }
 
       @media (max-width: 900px) {
@@ -1283,45 +1324,42 @@
       <div class="price-cards-grid">
         <!-- Card 1: 3 BHK -->
         <div class="price-card" onclick="openPopupModal()">
-          <div class="card-bg-blur" style="background-image: url('images/interior_3bhk_lounge.png');"></div>
+          <div class="card-bg-blur" style="background-image: url('images/floor_plan_blueprint.png');"></div>
           <div class="price-card-content">
-            <div>
-              <div class="price-val">&#8377; On Request<sup>*</sup></div>
-              <div class="price-bhk">3 BHK</div>
+            <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center;">
+              <div class="price-bhk" style="margin-bottom: 12px;">3 BHK</div>
+              <div class="price-size-pill" style="margin-bottom: 0;">3,067 - 3,800 Sq.Ft.</div>
             </div>
-            <div class="price-size-pill">3,067 - 3,800 Sq.Ft.</div>
             <button class="price-get-details-btn">
-              Get Full Details
+              Enquire Now
             </button>
           </div>
         </div>
 
         <!-- Card 2: 4 BHK -->
         <div class="price-card" onclick="openPopupModal()">
-          <div class="card-bg-blur" style="background-image: url('images/interior_4bhk_maids.png');"></div>
+          <div class="card-bg-blur" style="background-image: url('images/floor_plan_blueprint.png');"></div>
           <div class="price-card-content">
-            <div>
-              <div class="price-val">&#8377; On Request<sup>*</sup></div>
-              <div class="price-bhk">4 BHK</div>
+            <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center;">
+              <div class="price-bhk" style="margin-bottom: 12px;">4 BHK</div>
+              <div class="price-size-pill" style="margin-bottom: 0;">4,123 - 4,980 Sq.Ft.</div>
             </div>
-            <div class="price-size-pill">4,123 - 4,980 Sq.Ft.</div>
             <button class="price-get-details-btn">
-              Get Full Details
+              Enquire Now
             </button>
           </div>
         </div>
 
         <!-- Card 3: 5 & 6 BHK Duplexes -->
         <div class="price-card" onclick="openPopupModal()">
-          <div class="card-bg-blur" style="background-image: url('images/interior_5bhk_duplex.png');"></div>
+          <div class="card-bg-blur" style="background-image: url('images/floor_plan_blueprint.png');"></div>
           <div class="price-card-content">
-            <div>
-              <div class="price-val">&#8377; On Request<sup>*</sup></div>
-              <div class="price-bhk">5 &amp; 6 BHK Duplexes</div>
+            <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center;">
+              <div class="price-bhk" style="margin-bottom: 12px;">5 &amp; 6 BHK Duplexes</div>
+              <div class="price-size-pill" style="margin-bottom: 0;">8,500 - 9,859 Sq.Ft.</div>
             </div>
-            <div class="price-size-pill">8,500 - 9,859 Sq.Ft.</div>
             <button class="price-get-details-btn">
-              Get Full Details
+              Enquire Now
             </button>
           </div>
         </div>
