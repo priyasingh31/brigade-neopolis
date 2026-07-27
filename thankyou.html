@@ -15,6 +15,23 @@
   <script>
     gtag('event', 'conversion', {'send_to': 'AW-11550015506/tlimCJzS3sUcEJKAvYMr'});
   </script>
+  <!-- Event snippet for Click to call conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11550015506/LWI1CMbso9ccEJKAvYMr',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You - Brigade Banashankari</title>
@@ -82,7 +99,7 @@
         </ul>
       </nav>
       <div class="flex shrink-0 items-center gap-1 sm:gap-2">
-        <a href="tel:+919980189914"
+        <a href="tel:+919980189914" onclick="return gtag_report_conversion('tel:+919980189914');"
           class="flex shrink-0 items-center justify-center rounded-full bg-primary px-2.5 py-2 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:scale-105 sm:px-3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 shrink-0">
             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
@@ -146,7 +163,7 @@
       <div>
         <h3 class="text-base font-bold text-gold">Contact</h3>
         <ul class="mt-3 space-y-1 text-sm opacity-90">
-          <li>📞 <a href="tel:+919980189914" class="hover:underline">+91 99801 89914</a></li>
+          <li>📞 <a href="tel:+919980189914" onclick="return gtag_report_conversion('tel:+919980189914');" class="hover:underline">+91 99801 89914</a></li>
           <li>📍 Kokapet, Hyderabad — 500075</li>
         </ul>
       </div>

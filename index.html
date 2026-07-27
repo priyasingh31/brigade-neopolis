@@ -11,6 +11,23 @@
 
     gtag('config', 'AW-11565744857');
   </script>
+  <!-- Event snippet for Click to call conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11550015506/LWI1CMbso9ccEJKAvYMr',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Brigade Gateway Neopolis, Kokapet | Price, Floor Plan &amp; Location | Realhubb – projectsprint.info</title>
@@ -528,7 +545,7 @@
       </nav>
 
       <div class="d2-nav-right">
-        <a href="tel:+919980189914" class="d2-call-btn">
+        <a href="tel:+919980189914" onclick="return gtag_report_conversion('tel:+919980189914');" class="d2-call-btn">
           <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6a1 1 0 0 0-1 .2l-2.2 2.2a15 15 0 0 1-6.5-6.6l2.2-2.2a1 1 0 0 0 .2-1C8.7 6.5 8.5 5.2 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg>
           <span>Call</span>
         </a>
@@ -3178,7 +3195,7 @@
         <div>
           <div class="ft-col-title">CONTACT</div>
           <div class="ft-contact-list">
-            <a href="tel:+919980189914" class="ft-phone">+91 9980189914</a>
+            <a href="tel:+919980189914" onclick="return gtag_report_conversion('tel:+919980189914');" class="ft-phone">+91 9980189914</a>
             <a href="https://wa.me/919980189914" target="_blank" class="ft-wa-link">
               <span>💬 WhatsApp Us</span>
             </a>
