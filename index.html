@@ -10,6 +10,7 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-11565744857');
+    gtag('config', 'AW-11550015506');
   </script>
   <!-- Event snippet for Click to call conversion page -->
   <script>
@@ -3579,8 +3580,20 @@
       const formData = new FormData(e.target);
       const name = formData.get('fullname') || formData.get('name');
       const phone = formData.get('mobile') || formData.get('phone');
+      
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-11550015506/tlimCJzS3suCEJkAvYMr'
+        });
+      }
+      
       alert(`Thank you, ${name}! Your enquiry for Brigade Gateway has been received. Our team will contact you shortly at +91 ${phone}.`);
       e.target.reset();
+    }
+
+    function handlePopupFormSubmit(e) {
+      handleFormSubmit(e);
+      closePopupModal();
     }
 
     // Live Pre-Launch Countdown Timer
